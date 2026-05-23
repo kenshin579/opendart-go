@@ -98,11 +98,16 @@ func renderIndex(refs []APIRef) string {
 		// 링크 대상은 <> 로 감싼다 — 카테고리/파일명에 공백·괄호가 있어도
 		// (예: "정기보고서 주요정보/증자(감자) 현황.md") GitHub/CommonMark 에서
 		// 링크가 깨지지 않도록 한다.
-		link := fmt.Sprintf("%s/%s.md", sanitize(r.Category), sanitize(r.Name))
 		fmt.Fprintf(&b, "| %s | %s | [%s](<%s>) |\n",
-			r.Name, strings.ReplaceAll(r.Desc, "|", `\|`), r.Name, link)
+			r.Name, strings.ReplaceAll(r.Desc, "|", `\|`), r.Name, docRelPath(r))
 	}
 	return strings.TrimRight(b.String(), "\n") + "\n"
+}
+
+// docRelPath 는 docs/api 기준 상대 문서 경로 "{카테고리}/{이름}.md" 를 반환한다
+// (항상 "/" 구분자 — markdown 링크와 파일 쓰기가 같은 규칙을 공유하도록).
+func docRelPath(ref APIRef) string {
+	return sanitize(ref.Category) + "/" + sanitize(ref.Name) + ".md"
 }
 
 // sanitize 는 파일/디렉토리명에 부적합한 문자를 치환한다.

@@ -78,15 +78,13 @@ func run() error {
 }
 
 // writeDoc 은 한 API md 를 docs/api/{카테고리}/{이름}.md 로 쓴다.
+// 경로는 renderIndex 의 링크와 동일한 docRelPath 규칙을 공유한다.
 func writeDoc(ref APIRef, spec APISpec) error {
-	dir := filepath.Join(docsRoot, sanitize(ref.Category))
-	if err := os.MkdirAll(dir, 0o755); err != nil {
+	full := filepath.Join(docsRoot, filepath.FromSlash(docRelPath(ref)))
+	if err := os.MkdirAll(filepath.Dir(full), 0o755); err != nil {
 		return err
 	}
-	return os.WriteFile(
-		filepath.Join(dir, sanitize(ref.Name)+".md"),
-		[]byte(renderMarkdown(ref, spec)), 0o644,
-	)
+	return os.WriteFile(full, []byte(renderMarkdown(ref, spec)), 0o644)
 }
 
 // writeIndex 는 docs/api/README.md 를 쓴다.
