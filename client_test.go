@@ -16,6 +16,7 @@ func TestNewClient_WiresSubClients(t *testing.T) {
 	c, err := NewClient("KEY", WithCorpCodeCacheDir(t.TempDir()))
 	require.NoError(t, err)
 	assert.NotNil(t, c.Disclosure)
+	assert.NotNil(t, c.Report)
 }
 
 func TestNewClientFromEnv(t *testing.T) {

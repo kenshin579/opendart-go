@@ -1,0 +1,18 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20240312000736",
+            "corp_cls": "Y",
+            "corp_code": "00126380",
+            "corp_name": "삼성전자",
+            "se": "주당액면가액(원)",
+            "stock_knd": "-",
+            "thstrm": "100",
+            "frmtrm": "100",
+            "lwfr": "100",
+            "stlm_dt": "2023-12-31"
+        }
+    ]
+}

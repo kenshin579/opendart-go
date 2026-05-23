@@ -1,0 +1,19 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20240312000736",
+            "corp_cls": "Y",
+            "corp_code": "00126380",
+            "corp_name": "삼성전자",
+            "change_on": "2021년 04월 29일",
+            "mxmm_shrholdr_nm": "삼성생명보험㈜",
+            "posesn_stock_co": "1,263,050,053",
+            "qota_rt": "21.16%",
+            "change_cause": "변동전 최대주주의 피상속",
+            "rm": "-",
+            "stlm_dt": "2023-12-31"
+        }
+    ]
+}

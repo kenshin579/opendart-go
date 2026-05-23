@@ -1,0 +1,21 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20240312000736",
+            "corp_cls": "Y",
+            "corp_code": "00126380",
+            "corp_name": "삼성전자",
+            "stock_knd": "보통주",
+            "nm": "삼성생명보험㈜",
+            "relate": "최대주주 본인",
+            "bsis_posesn_stock_co": "508,157,148",
+            "bsis_posesn_stock_qota_rt": "8.51",
+            "trmend_posesn_stock_co": "508,157,148",
+            "trmend_posesn_stock_qota_rt": "8.51",
+            "rm": "-",
+            "stlm_dt": "2023-12-31"
+        }
+    ]
+}

@@ -11,6 +11,7 @@ import (
 	"github.com/kenshin579/opendart/disclosure"
 	"github.com/kenshin579/opendart/internal/corpcode"
 	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart/report"
 )
 
 const defaultCorpCacheTTL = 24 * time.Hour
@@ -21,6 +22,7 @@ type Client struct {
 	corp *corpcode.Cache
 
 	Disclosure *disclosure.Client // DS001 공시정보
+	Report     *report.Client     // DS002 정기보고서 주요정보
 }
 
 // NewClient 는 API 키로 Client 를 만든다.
@@ -42,6 +44,7 @@ func NewClient(apiKey string, opts ...Option) (*Client, error) {
 
 	c := &Client{http: hc}
 	c.Disclosure = disclosure.New(hc)
+	c.Report = report.New(hc)
 
 	cacheDir := cfg.corpCacheDir
 	if cacheDir == "" {
