@@ -1,0 +1,23 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20240312000736",
+            "corp_cls": "Y",
+            "corp_code": "00126380",
+            "corp_name": "삼성전자",
+            "isu_cmpny": "삼성전자㈜",
+            "scrits_knd_nm": "회사채",
+            "isu_mth_nm": "공모",
+            "isu_de": "1997.10.02",
+            "facvalu_totamt": "128,940,000,000",
+            "intrt": "7.7%",
+            "evl_grad_instt": "Aa2 (Moody's), AA- (S&P)",
+            "mtd": "2027.10.01",
+            "repy_at": "일부상환",
+            "mngt_cmpny": "Goldman Sachs 등",
+            "stlm_dt": "2023-12-31"
+        }
+    ]
+}
