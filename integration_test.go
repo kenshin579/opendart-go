@@ -40,3 +40,19 @@ func TestIntegration_Dividend(t *testing.T) {
 	require.NoError(t, err)
 	require.NotEmpty(t, items)
 }
+
+func TestIntegration_DebtSecuritiesIssuance(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+
+	corp, err := c.ResolveCorpCode(context.Background(), "005930")
+	require.NoError(t, err)
+
+	items, err := c.Report.DebtSecuritiesIssuance(context.Background(), report.ReportParams{
+		CorpCode:  corp,
+		BsnsYear:  "2023",
+		ReprtCode: report.AnnualReport,
+	})
+	require.NoError(t, err)
+	require.NotEmpty(t, items)
+}
