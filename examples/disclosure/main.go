@@ -5,8 +5,10 @@ package main
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/kenshin579/opendart"
 	"github.com/kenshin579/opendart/disclosure"
@@ -33,8 +35,18 @@ func main() {
 	fmt.Printf("회사명: %s (%s) 대표: %s 설립: %s\n",
 		company.CorpName, company.StockCode, company.CeoName, company.EstDate)
 
-	// 공시검색 (최근 5건)
-	res, err := client.Disclosure.SearchDisclosures(ctx, disclosure.SearchParams{CorpCode: corp, PageCount: 5})
+	// 공시검색 (최근 3개월, 최대 5건).
+	// 날짜 범위를 지정하지 않으면 OpenDART 는 당일만 조회하므로 공시가 없으면 ErrNoData.
+	bgnDe := time.Now().AddDate(0, -3, 0).Format("20060102")
+	res, err := client.Disclosure.SearchDisclosures(ctx, disclosure.SearchParams{
+		CorpCode:  corp,
+		BgnDe:     bgnDe,
+		PageCount: 5,
+	})
+	if errors.Is(err, opendart.ErrNoData) {
+		fmt.Println("최근 공시 없음")
+		return
+	}
 	if err != nil {
 		log.Fatalf("SearchDisclosures: %v", err)
 	}
