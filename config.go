@@ -29,4 +29,6 @@ func WithHTTPClient(c *http.Client) Option { return func(o *clientOptions) { o.h
 func WithCorpCodeCacheDir(dir string) Option { return func(o *clientOptions) { o.corpCacheDir = dir } }
 
 // WithCorpCodeCacheTTL 은 corp_code 재다운로드 주기를 지정한다 (기본 24h).
-func WithCorpCodeCacheTTL(d time.Duration) Option { return func(o *clientOptions) { o.corpCacheTTL = d } }
+func WithCorpCodeCacheTTL(d time.Duration) Option {
+	return func(o *clientOptions) { o.corpCacheTTL = d }
+}
