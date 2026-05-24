@@ -1,0 +1,18 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "reprt_code": "11011",
+            "bsns_year": "2023",
+            "corp_code": "00126380",
+            "stock_code": "005930",
+            "stlm_dt": "2023-12-31",
+            "idx_cl_code": "M210000",
+            "idx_cl_nm": "수익성지표",
+            "idx_code": "M211100",
+            "idx_nm": "세전계속사업이익률",
+            "idx_val": "5.981"
+        }
+    ]
+}
