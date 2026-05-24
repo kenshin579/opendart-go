@@ -57,16 +57,16 @@ func (c *Client) Employees(ctx context.Context, p ReportParams) ([]EmployeeItem,
 
 // UnregisteredExecutiveCompensationItem 은 미등기임원 보수현황 (unrstExctvMendngSttus) 한 건.
 type UnregisteredExecutiveCompensationItem struct {
-	RceptNo          string `json:"rcept_no"`            // 접수번호
-	CorpCls          string `json:"corp_cls"`            // 법인구분 (Y/K/N/E)
-	CorpCode         string `json:"corp_code"`           // 고유번호
-	CorpName         string `json:"corp_name"`           // 회사명
-	Se               string `json:"se"`                  // 구분
-	FyerSalaryTotamt string `json:"fyer_salary_totamt"`  // 연간급여 총액
-	JanSalaryAm      string `json:"jan_salary_am"`       // 1인평균 급여액
-	Nmpr             string `json:"nmpr"`                // 인원수
-	Rm               string `json:"rm"`                  // 비고
-	StlmDt           string `json:"stlm_dt"`             // 결산기준일
+	RceptNo          string `json:"rcept_no"`           // 접수번호
+	CorpCls          string `json:"corp_cls"`           // 법인구분 (Y/K/N/E)
+	CorpCode         string `json:"corp_code"`          // 고유번호
+	CorpName         string `json:"corp_name"`          // 회사명
+	Se               string `json:"se"`                 // 구분
+	FyerSalaryTotamt string `json:"fyer_salary_totamt"` // 연간급여 총액
+	JanSalaryAm      string `json:"jan_salary_am"`      // 1인평균 급여액
+	Nmpr             string `json:"nmpr"`               // 인원수
+	Rm               string `json:"rm"`                 // 비고
+	StlmDt           string `json:"stlm_dt"`            // 결산기준일
 }
 
 // UnregisteredExecutiveCompensation 은 미등기임원 보수현황을 조회한다.
@@ -76,16 +76,16 @@ func (c *Client) UnregisteredExecutiveCompensation(ctx context.Context, p Report
 
 // OutsideDirectorChangeItem 은 사외이사 및 그 변동현황 (outcmpnyDrctrNdChangeSttus) 한 건.
 type OutsideDirectorChangeItem struct {
-	RceptNo      string `json:"rcept_no"`        // 접수번호
-	CorpCls      string `json:"corp_cls"`        // 법인구분 (Y/K/N/E)
-	CorpCode     string `json:"corp_code"`       // 고유번호
-	CorpName     string `json:"corp_name"`       // 회사명
-	DrctrCo      string `json:"drctr_co"`        // 이사의 수
-	OtcmpDrctrCo string `json:"otcmp_drctr_co"`  // 사외이사 수
-	Apnt         string `json:"apnt"`            // 사외이사 변동현황(선임)
-	Rlsofc       string `json:"rlsofc"`          // 사외이사 변동현황(해임)
-	MdstrmResig  string `json:"mdstrm_resig"`    // 사외이사 변동현황(중도퇴임)
-	StlmDt       string `json:"stlm_dt"`         // 결산기준일
+	RceptNo      string `json:"rcept_no"`       // 접수번호
+	CorpCls      string `json:"corp_cls"`       // 법인구분 (Y/K/N/E)
+	CorpCode     string `json:"corp_code"`      // 고유번호
+	CorpName     string `json:"corp_name"`      // 회사명
+	DrctrCo      string `json:"drctr_co"`       // 이사의 수
+	OtcmpDrctrCo string `json:"otcmp_drctr_co"` // 사외이사 수
+	Apnt         string `json:"apnt"`           // 사외이사 변동현황(선임)
+	Rlsofc       string `json:"rlsofc"`         // 사외이사 변동현황(해임)
+	MdstrmResig  string `json:"mdstrm_resig"`   // 사외이사 변동현황(중도퇴임)
+	StlmDt       string `json:"stlm_dt"`        // 결산기준일
 }
 
 // OutsideDirectorChanges 는 사외이사 및 그 변동현황을 조회한다.
@@ -96,16 +96,16 @@ func (c *Client) OutsideDirectorChanges(ctx context.Context, p ReportParams) ([]
 // DirectorAuditorApprovedCompensationItem 은 이사·감사 전체의 보수현황(주주총회 승인금액)
 // (drctrAdtAllMendngSttusGmtsckConfmAmount) 한 건.
 type DirectorAuditorApprovedCompensationItem struct {
-	RceptNo           string `json:"rcept_no"`             // 접수번호
-	CorpCls           string `json:"corp_cls"`             // 법인구분 (Y/K/N/E)
-	CorpCode          string `json:"corp_code"`            // 고유번호
-	CorpName          string `json:"corp_name"`            // 회사명
-	Se                string `json:"se"`                   // 구분
-	Nmpr              string `json:"nmpr"`                 // 인원수
-	GmtsckConfmAmount string `json:"gmtsck_confm_amount"`  // 주주총회 승인금액
-	Rm                string `json:"rm"`                   // 비고
-	StlmDt            string `json:"stlm_dt"`              // 결산기준일
-	FsclYear          string `json:"fscl_year"`            // 사업연도
+	RceptNo           string `json:"rcept_no"`            // 접수번호
+	CorpCls           string `json:"corp_cls"`            // 법인구분 (Y/K/N/E)
+	CorpCode          string `json:"corp_code"`           // 고유번호
+	CorpName          string `json:"corp_name"`           // 회사명
+	Se                string `json:"se"`                  // 구분
+	Nmpr              string `json:"nmpr"`                // 인원수
+	GmtsckConfmAmount string `json:"gmtsck_confm_amount"` // 주주총회 승인금액
+	Rm                string `json:"rm"`                  // 비고
+	StlmDt            string `json:"stlm_dt"`             // 결산기준일
+	FsclYear          string `json:"fscl_year"`           // 사업연도
 }
 
 // DirectorAuditorApprovedCompensation 은 이사·감사 전체의 보수현황(주주총회 승인금액)을 조회한다.
@@ -131,7 +131,7 @@ type DirectorAuditorTotalCompensationItem struct {
 	StkOptUnexrcsblQty     string `json:"stk_opt_unexrcsbl_qty"`       // 주식매수선택권 행사불가수량
 	StkOptRmnBlce          string `json:"stk_opt_rmn_blce"`            // 주식매수선택권 잔여금액
 	OthrStkBsdCmpnUnpydQty string `json:"othr_stk_bsd_cmpn_unpyd_qty"` // 그 외 주식기준 보상 미지급수량
-	OthrStkBsdCmpnMktVl    string `json:"othr_stk_bsd_cmpn_mkt_vl"`   // 그 외 주식기준 보상 시장가치
+	OthrStkBsdCmpnMktVl    string `json:"othr_stk_bsd_cmpn_mkt_vl"`    // 그 외 주식기준 보상 시장가치
 }
 
 // DirectorAuditorTotalCompensation 은 이사·감사 전체의 보수현황(보수지급금액 - 이사·감사 전체)을 조회한다.
@@ -158,7 +158,7 @@ type DirectorAuditorCompensationByTypeItem struct {
 	StkOptUnexrcsblQty     string `json:"stk_opt_unexrcsbl_qty"`       // 주식매수선택권 행사불가수량
 	StkOptRmnBlce          string `json:"stk_opt_rmn_blce"`            // 주식매수선택권 잔여금액
 	OthrStkBsdCmpnUnpydQty string `json:"othr_stk_bsd_cmpn_unpyd_qty"` // 그 외 주식기준 보상 미지급수량
-	OthrStkBsdCmpnMktVl    string `json:"othr_stk_bsd_cmpn_mkt_vl"`   // 그 외 주식기준 보상 시장가치
+	OthrStkBsdCmpnMktVl    string `json:"othr_stk_bsd_cmpn_mkt_vl"`    // 그 외 주식기준 보상 시장가치
 }
 
 // DirectorAuditorCompensationByType 은 이사·감사 전체의 보수현황(보수지급금액 - 유형별)을 조회한다.
