@@ -46,3 +46,16 @@ func TestTangibleAssetAcquisition(t *testing.T) {
 	assert.Equal(t, "한국감정원", got.ExevlIntn)
 	assert.Equal(t, "미해당", got.FtcSttAtn)
 }
+
+func TestTangibleAssetTransfer(t *testing.T) {
+	c := newTestClient(t, map[string]string{"/api/tgastTrfDecsn.json": "tgastTrfDecsn.json"})
+	items, err := c.TangibleAssetTransfer(context.Background(), MaterialParams{CorpCode: "00126380", BgnDe: "20230101", EndDe: "20231231"})
+	require.NoError(t, err)
+	require.Len(t, items, 1)
+	got := items[0]
+	assert.Equal(t, "20230710000444", got.RceptNo)
+	assert.Equal(t, "토지", got.AstSen)
+	assert.Equal(t, "80,000,000,000", got.TrfdtlTrfprc)
+	assert.Equal(t, "한국감정원", got.ExevlIntn)
+	assert.Equal(t, "미해당", got.FtcSttAtn)
+}
