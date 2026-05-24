@@ -218,6 +218,43 @@ func (c *Client) DebtSecurities(ctx context.Context, p Params) (*DebtSecuritiesR
 	return out, nil
 }
 
+// DepositaryReceiptsRegistration 은 증권예탁증권 증권신고서(stkdpRs)의 그룹별 항목.
+type DepositaryReceiptsRegistration struct {
+	General       []RsGeneralItem      // 일반사항
+	SecurityTypes []RsSecurityTypeItem // 증권의종류
+	Underwriters  []RsUnderwriterItem  // 인수인정보
+	FundUsage     []RsFundUsageItem    // 자금의사용목적
+	Sellers       []RsSellerItem       // 매출인에관한사항
+}
+
+// DepositaryReceipts 는 증권예탁증권 증권신고서(DS006)를 조회한다.
+func (c *Client) DepositaryReceipts(ctx context.Context, p Params) (*DepositaryReceiptsRegistration, error) {
+	groups, err := httpclient.GetGroups(ctx, c.http, "/api/stkdpRs.json", p.toMap())
+	if err != nil {
+		return nil, err
+	}
+	out := &DepositaryReceiptsRegistration{}
+	for _, g := range groups {
+		var derr error
+		switch g.Title {
+		case "일반사항":
+			derr = json.Unmarshal(g.List, &out.General)
+		case "증권의종류":
+			derr = json.Unmarshal(g.List, &out.SecurityTypes)
+		case "인수인정보":
+			derr = json.Unmarshal(g.List, &out.Underwriters)
+		case "자금의사용목적":
+			derr = json.Unmarshal(g.List, &out.FundUsage)
+		case "매출인에관한사항":
+			derr = json.Unmarshal(g.List, &out.Sellers)
+		}
+		if derr != nil {
+			return nil, derr
+		}
+	}
+	return out, nil
+}
+
 // EquitySecurities 는 지분증권 증권신고서(DS006)를 조회한다.
 func (c *Client) EquitySecurities(ctx context.Context, p Params) (*EquitySecuritiesRegistration, error) {
 	groups, err := httpclient.GetGroups(ctx, c.http, "/api/estkRs.json", p.toMap())

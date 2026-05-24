@@ -1,0 +1,21 @@
+{
+  "status": "000",
+  "message": "정상",
+  "group": [
+    {"title": "일반사항", "list": [
+      {"rcept_no": "20230701000222", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트예탁증권", "sbd": "2023년 07월 10일", "pymd": "2023년 07월 20일", "sband": "-", "asand": "-", "asstd": "-", "exstk": "-", "exprc": "-", "expd": "-", "rpt_rcpn": "-"}
+    ]},
+    {"title": "증권의종류", "list": [
+      {"rcept_no": "20230701000222", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트예탁증권", "stksen": "주식예탁증서(DR)", "stkcnt": "2,000,000", "fv": "5,000", "slprc": "60,000", "slta": "120,000,000,000", "slmthn": "해외모집"}
+    ]},
+    {"title": "인수인정보", "list": [
+      {"rcept_no": "20230701000222", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트예탁증권", "actsen": "대표주관회사", "actnmn": "외국계증권사", "stksen": "DR", "udtcnt": "2,000,000", "udtamt": "120,000,000,000", "udtprc": "총액인수", "udtmth": "총액인수"}
+    ]},
+    {"title": "자금의사용목적", "list": [
+      {"rcept_no": "20230701000222", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트예탁증권", "se": "시설자금", "amt": "120,000,000,000"}
+    ]},
+    {"title": "매출인에관한사항", "list": [
+      {"rcept_no": "20230701000222", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트예탁증권", "hdr": "-", "rl_cmp": "-", "bfsl_hdstk": "-", "slstk": "-", "atsl_hdstk": "-"}
+    ]}
+  ]
+}
