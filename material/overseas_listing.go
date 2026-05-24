@@ -34,3 +34,22 @@ type OverseasListingDecisionItem struct {
 func (c *Client) OverseasListingDecision(ctx context.Context, p MaterialParams) ([]OverseasListingDecisionItem, error) {
 	return httpclient.GetList[OverseasListingDecisionItem](ctx, c.http, "/api/ovLstDecsn.json", p.toMap())
 }
+
+// OverseasListingItem 은 해외 증권시장 주권등 상장 (ovLst) 한 건.
+type OverseasListingItem struct {
+	RceptNo       string `json:"rcept_no"`        // 접수번호
+	CorpCls       string `json:"corp_cls"`        // 법인구분 (Y/K/N/E)
+	CorpCode      string `json:"corp_code"`       // 고유번호
+	CorpName      string `json:"corp_name"`       // 회사명
+	LststkOstkCnt string `json:"lststk_ostk_cnt"` // 상장주식 종류 및 수(보통주식(주))
+	LststkEstkCnt string `json:"lststk_estk_cnt"` // 상장주식 종류 및 수(기타주식(주))
+	LstexNt       string `json:"lstex_nt"`        // 상장거래소(소재국가)
+	StkCd         string `json:"stk_cd"`          // 종목 명 (code)
+	Lstd          string `json:"lstd"`            // 상장일자
+	Cfd           string `json:"cfd"`             // 확인일자
+}
+
+// OverseasListing 은 해외 증권시장 주권등 상장(주요사항보고서)을 조회한다.
+func (c *Client) OverseasListing(ctx context.Context, p MaterialParams) ([]OverseasListingItem, error) {
+	return httpclient.GetList[OverseasListingItem](ctx, c.http, "/api/ovLst.json", p.toMap())
+}

@@ -1,0 +1,11 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20231010000222", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트해외상장",
+      "lststk_ostk_cnt": "1,000,000", "lststk_estk_cnt": "-",
+      "lstex_nt": "미국 (NASDAQ)", "stk_cd": "TEST", "lstd": "2023년 10월 02일", "cfd": "2023년 10월 03일"
+    }
+  ]
+}
