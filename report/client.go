@@ -47,12 +47,17 @@ type listResponse[T any] struct {
 	List []T `json:"list"`
 }
 
-// getList 는 공통 list 조회 헬퍼. GetJSON 의 status 검사를 거친 뒤 list 만 반환한다.
-// 조회 데이터 없음(013)은 httpclient 가 ErrNoData 로 변환한다.
-func getList[T any](ctx context.Context, hc *httpclient.Client, path string, p ReportParams) ([]T, error) {
+// getListParams 는 raw 파라미터 맵으로 list 를 조회하는 코어 헬퍼.
+// GetJSON 의 status 검사를 거친 뒤 list 만 반환한다(013은 httpclient 가 ErrNoData 로 변환).
+func getListParams[T any](ctx context.Context, hc *httpclient.Client, path string, params map[string]string) ([]T, error) {
 	var resp listResponse[T]
-	if err := hc.GetJSON(ctx, path, p.toMap(), &resp); err != nil {
+	if err := hc.GetJSON(ctx, path, params, &resp); err != nil {
 		return nil, err
 	}
 	return resp.List, nil
+}
+
+// getList 는 ReportParams 기반 thin wrapper.
+func getList[T any](ctx context.Context, hc *httpclient.Client, path string, p ReportParams) ([]T, error) {
+	return getListParams[T](ctx, hc, path, p.toMap())
 }
