@@ -1,0 +1,22 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20241031000508",
+      "corp_cls": "Y",
+      "corp_code": "00126380",
+      "corp_name": "삼성전자",
+      "bddd": "2024년 10월 31일",
+      "od_a_at_t": "6",
+      "od_a_at_b": "-",
+      "adt_a_atn": "참석",
+      "lstex_nt": "룩셈부르크증권거래소(룩셈부르크)",
+      "dlststk_ostk_cnt": "-",
+      "dlststk_estk_cnt": "38,685,850",
+      "dlstrq_prd": "2024년 11월 06일",
+      "dlst_prd": "2025년 03월 31일",
+      "dlst_rs": "룩셈부르크증권거래소에 상장된 주식예탁증서(DR) 우선주의 거래량 미미"
+    }
+  ]
+}

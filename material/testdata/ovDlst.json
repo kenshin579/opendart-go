@@ -1,0 +1,12 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20231215000444", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트상장폐지",
+      "lstex_nt": "미국 (NASDAQ)",
+      "dlststk_ostk_cnt": "1,000,000", "dlststk_estk_cnt": "-",
+      "tredd": "2023년 12월 14일", "dlst_rs": "거래량 부족", "cfd": "2023년 12월 15일"
+    }
+  ]
+}

@@ -297,3 +297,63 @@ func TestIntegration_CompanyDivisionMerger(t *testing.T) {
 		require.NotEmpty(t, it.RceptNo)
 	}
 }
+
+func TestIntegration_OverseasListingDecision(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+	corp, err := c.ResolveCorpCode(context.Background(), "005930")
+	require.NoError(t, err)
+	items, err := c.Material.OverseasListingDecision(context.Background(), material.MaterialParams{CorpCode: corp, BgnDe: "20200101", EndDe: "20241231"})
+	if errors.Is(err, ErrNoData) {
+		t.Skip("해당 기간 해외상장 결정 데이터 없음")
+	}
+	require.NoError(t, err)
+	for _, it := range items {
+		require.NotEmpty(t, it.RceptNo)
+	}
+}
+
+func TestIntegration_OverseasListing(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+	corp, err := c.ResolveCorpCode(context.Background(), "005930")
+	require.NoError(t, err)
+	items, err := c.Material.OverseasListing(context.Background(), material.MaterialParams{CorpCode: corp, BgnDe: "20200101", EndDe: "20241231"})
+	if errors.Is(err, ErrNoData) {
+		t.Skip("해당 기간 해외상장 데이터 없음")
+	}
+	require.NoError(t, err)
+	for _, it := range items {
+		require.NotEmpty(t, it.RceptNo)
+	}
+}
+
+func TestIntegration_OverseasDelistingDecision(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+	corp, err := c.ResolveCorpCode(context.Background(), "005930")
+	require.NoError(t, err)
+	items, err := c.Material.OverseasDelistingDecision(context.Background(), material.MaterialParams{CorpCode: corp, BgnDe: "20200101", EndDe: "20241231"})
+	if errors.Is(err, ErrNoData) {
+		t.Skip("해당 기간 해외상장폐지 결정 데이터 없음")
+	}
+	require.NoError(t, err)
+	for _, it := range items {
+		require.NotEmpty(t, it.RceptNo)
+	}
+}
+
+func TestIntegration_OverseasDelisting(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+	corp, err := c.ResolveCorpCode(context.Background(), "005930")
+	require.NoError(t, err)
+	items, err := c.Material.OverseasDelisting(context.Background(), material.MaterialParams{CorpCode: corp, BgnDe: "20200101", EndDe: "20241231"})
+	if errors.Is(err, ErrNoData) {
+		t.Skip("해당 기간 해외상장폐지 데이터 없음")
+	}
+	require.NoError(t, err)
+	for _, it := range items {
+		require.NotEmpty(t, it.RceptNo)
+	}
+}
