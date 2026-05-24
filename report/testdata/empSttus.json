@@ -1,0 +1,27 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20240312000736",
+            "corp_cls": "Y",
+            "corp_code": "00126380",
+            "corp_name": "삼성전자",
+            "sexdstn": "남",
+            "fo_bbm": "DX",
+            "reform_bfe_emp_co_rgllbr": "-",
+            "reform_bfe_emp_co_cnttk": "-",
+            "reform_bfe_emp_co_etc": "-",
+            "rgllbr_co": "37,962",
+            "rgllbr_abacpt_labrr_co": "-",
+            "cnttk_co": "324",
+            "cnttk_abacpt_labrr_co": "-",
+            "sm": "38,286",
+            "avrg_cnwk_sdytrn": "16.5",
+            "fyer_salary_totamt": "-",
+            "jan_salary_am": "-",
+            "rm": "-",
+            "stlm_dt": "2023-12-31"
+        }
+    ]
+}
