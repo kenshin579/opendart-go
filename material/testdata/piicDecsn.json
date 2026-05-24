@@ -1,0 +1,27 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20230530000410",
+            "corp_cls": "Y",
+            "corp_code": "00107598",
+            "corp_name": "남양유업",
+            "nstk_ostk_cnt": "-",
+            "nstk_estk_cnt": "33,338",
+            "fv_ps": "5,000",
+            "bfic_tisstk_ostk": "720,000",
+            "bfic_tisstk_estk": "166,662",
+            "fdpp_fclt": "-",
+            "fdpp_bsninh": "-",
+            "fdpp_op": "7,184,339,000",
+            "fdpp_dtrp": "-",
+            "fdpp_ocsa": "-",
+            "fdpp_etc": "-",
+            "ic_mthn": "주주우선공모증자",
+            "ssl_at": "Y",
+            "ssl_bgd": "20230403",
+            "ssl_edd": "20230526"
+        }
+    ]
+}

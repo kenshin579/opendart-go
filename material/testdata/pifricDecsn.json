@@ -1,0 +1,42 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20220527000497",
+            "corp_cls": "K",
+            "corp_code": "00870481",
+            "corp_name": "에코캡",
+            "piic_nstk_ostk_cnt": "5,600,000",
+            "piic_nstk_estk_cnt": "-",
+            "piic_fv_ps": "100",
+            "piic_bfic_tisstk_ostk": "14,558,800",
+            "piic_bfic_tisstk_estk": "-",
+            "piic_fdpp_fclt": "8,779,904,500",
+            "piic_fdpp_bsninh": "-",
+            "piic_fdpp_op": "7,424,095,500",
+            "piic_fdpp_dtrp": "23,500,000,000",
+            "piic_fdpp_ocsa": "-",
+            "piic_fdpp_etc": "-",
+            "piic_ic_mthn": "주주배정후 실권주 일반공모",
+            "fric_nstk_ostk_cnt": "5,874,630",
+            "fric_nstk_estk_cnt": "-",
+            "fric_fv_ps": "100",
+            "fric_bfic_tisstk_ostk": "20,158,800",
+            "fric_bfic_tisstk_estk": "-",
+            "fric_nstk_asstd": "2022년 06월 14일",
+            "fric_nstk_ascnt_ps_ostk": "0.3",
+            "fric_nstk_ascnt_ps_estk": "-",
+            "fric_nstk_dividrk": "2022년 01월 01일",
+            "fric_nstk_dlprd": "-",
+            "fric_nstk_lstprd": "2022년 07월 01일",
+            "fric_bddd": "2022년 03월 03일",
+            "fric_od_a_at_t": "3",
+            "fric_od_a_at_b": "-",
+            "fric_adt_a_atn": "참석",
+            "ssl_at": "Y",
+            "ssl_bgd": "20220304",
+            "ssl_edd": "20220526"
+        }
+    ]
+}
