@@ -84,3 +84,35 @@ type TreasuryStockDisposalItem struct {
 func (c *Client) TreasuryStockDisposal(ctx context.Context, p MaterialParams) ([]TreasuryStockDisposalItem, error) {
 	return httpclient.GetList[TreasuryStockDisposalItem](ctx, c.http, "/api/tsstkDpDecsn.json", p.toMap())
 }
+
+// TreasuryStockTrustContractItem 은 자기주식취득 신탁계약 체결 결정 (tsstkAqTrctrCnsDecsn) 한 건.
+type TreasuryStockTrustContractItem struct {
+	RceptNo        string `json:"rcept_no"`           // 접수번호
+	CorpCls        string `json:"corp_cls"`           // 법인구분 (Y/K/N/E)
+	CorpCode       string `json:"corp_code"`          // 고유번호
+	CorpName       string `json:"corp_name"`          // 회사명
+	CtrPrc         string `json:"ctr_prc"`            // 계약금액(원)
+	CtrPdBgd       string `json:"ctr_pd_bgd"`         // 계약기간(시작일)
+	CtrPdEdd       string `json:"ctr_pd_edd"`         // 계약기간(종료일)
+	CtrPp          string `json:"ctr_pp"`             // 계약목적
+	CtrCnsInt      string `json:"ctr_cns_int"`        // 계약체결기관
+	CtrCnsPrd      string `json:"ctr_cns_prd"`        // 계약체결 예정일자
+	AqWtnDivOstk   string `json:"aq_wtn_div_ostk"`    // 계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(보통주식))
+	AqWtnDivOstkRt string `json:"aq_wtn_div_ostk_rt"` // 계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율%))
+	AqWtnDivEstk   string `json:"aq_wtn_div_estk"`    // 계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(기타주식))
+	AqWtnDivEstkRt string `json:"aq_wtn_div_estk_rt"` // 계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율%))
+	EaqOstk        string `json:"eaq_ostk"`           // 계약 전 자기주식 보유현황(기타취득(주)(보통주식))
+	EaqOstkRt      string `json:"eaq_ostk_rt"`        // 계약 전 자기주식 보유현황(기타취득(주)(비율%))
+	EaqEstk        string `json:"eaq_estk"`           // 계약 전 자기주식 보유현황(기타취득(주)(기타주식))
+	EaqEstkRt      string `json:"eaq_estk_rt"`        // 계약 전 자기주식 보유현황(기타취득(주)(비율%))
+	Bddd           string `json:"bddd"`               // 이사회결의일(결정일)
+	OdAAtT         string `json:"od_a_at_t"`          // 사외이사 참석여부(참석(명))
+	OdAAtB         string `json:"od_a_at_b"`          // 사외이사 참석여부(불참(명))
+	AdtAAtn        string `json:"adt_a_atn"`          // 감사(사외이사가 아닌 감사위원) 참석여부
+	CsIvBk         string `json:"cs_iv_bk"`           // 위탁투자중개업자
+}
+
+// TreasuryStockTrustContract 는 자기주식취득 신탁계약 체결 결정(주요사항보고서)을 조회한다.
+func (c *Client) TreasuryStockTrustContract(ctx context.Context, p MaterialParams) ([]TreasuryStockTrustContractItem, error) {
+	return httpclient.GetList[TreasuryStockTrustContractItem](ctx, c.http, "/api/tsstkAqTrctrCnsDecsn.json", p.toMap())
+}

@@ -1,0 +1,31 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230310000333",
+      "corp_cls": "Y",
+      "corp_code": "00126380",
+      "corp_name": "테스트신탁체결",
+      "ctr_prc": "50,000,000,000",
+      "ctr_pd_bgd": "2023년 03월 11일",
+      "ctr_pd_edd": "2023년 09월 10일",
+      "ctr_pp": "주가 안정 및 주주가치 제고",
+      "ctr_cns_int": "한국투자증권",
+      "ctr_cns_prd": "2023년 03월 11일",
+      "aq_wtn_div_ostk": "5,000,000",
+      "aq_wtn_div_ostk_rt": "2.5",
+      "aq_wtn_div_estk": "-",
+      "aq_wtn_div_estk_rt": "-",
+      "eaq_ostk": "-",
+      "eaq_ostk_rt": "-",
+      "eaq_estk": "-",
+      "eaq_estk_rt": "-",
+      "bddd": "2023년 03월 10일",
+      "od_a_at_t": "3",
+      "od_a_at_b": "0",
+      "adt_a_atn": "1",
+      "cs_iv_bk": "한국투자증권"
+    }
+  ]
+}
