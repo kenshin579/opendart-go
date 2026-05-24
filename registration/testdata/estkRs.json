@@ -1,0 +1,25 @@
+{
+  "status": "000",
+  "message": "정상",
+  "group": [
+    {"title": "일반사항", "list": [
+      {"rcept_no": "20230515002454", "corp_cls": "Y", "corp_code": "00107598", "corp_name": "남양유업", "sbd": "2023년 06월 01일 ~ 2023년 06월 02일", "pymd": "2023년 06월 12일", "sband": "-", "asand": "2023년 05월 17일", "asstd": "2023년 05월 08일", "exstk": "-", "exprc": "-", "expd": "-", "rpt_rcpn": "20230331003707"}
+    ]},
+    {"title": "증권의종류", "list": [
+      {"rcept_no": "20230515002454", "corp_cls": "Y", "corp_code": "00107598", "corp_name": "남양유업", "stksen": "우선주", "stkcnt": "33,338", "fv": "5,000", "slprc": "214,000", "slta": "7,134,332,000", "slmthn": "주주우선공모"}
+    ]},
+    {"title": "인수인정보", "list": [
+      {"rcept_no": "20230515002454", "corp_cls": "Y", "corp_code": "00107598", "corp_name": "남양유업", "stksen": "기타", "actsen": "주선", "actnmn": "NH투자증권", "udtcnt": "-", "udtamt": "-", "udtprc": "-", "udtmth": "-"}
+    ]},
+    {"title": "자금의사용목적", "list": [
+      {"rcept_no": "20230515002454", "corp_cls": "Y", "corp_code": "00107598", "corp_name": "남양유업", "se": "운영자금", "amt": "7,134,332,000"},
+      {"rcept_no": "20230515002454", "corp_cls": "Y", "corp_code": "00107598", "corp_name": "남양유업", "se": "발행제비용", "amt": "177,020,280"}
+    ]},
+    {"title": "매출인에관한사항", "list": [
+      {"rcept_no": "20230515002454", "corp_cls": "Y", "corp_code": "00107598", "corp_name": "남양유업", "hdr": "-", "rl_cmp": "-", "bfsl_hdstk": "-", "slstk": "-", "atsl_hdstk": "-"}
+    ]},
+    {"title": "일반청약자환매청구권", "list": [
+      {"rcept_no": "20230515002454", "corp_cls": "Y", "corp_code": "00107598", "corp_name": "남양유업", "exprc": "-", "expd": "-", "grtrs": "-", "exavivr": "-", "grtcnt": "-"}
+    ]}
+  ]
+}

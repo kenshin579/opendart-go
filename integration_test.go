@@ -10,6 +10,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/kenshin579/opendart/material"
+	"github.com/kenshin579/opendart/registration"
 	"github.com/kenshin579/opendart/report"
 )
 
@@ -354,6 +355,53 @@ func TestIntegration_OverseasDelisting(t *testing.T) {
 	}
 	require.NoError(t, err)
 	for _, it := range items {
+		require.NotEmpty(t, it.RceptNo)
+	}
+}
+
+func TestIntegration_EquitySecurities(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+	// 남양유업: 2023 유상증자 지분증권 신고서 존재
+	res, err := c.Registration.EquitySecurities(context.Background(), registration.Params{CorpCode: "00107598", BgnDe: "20180101", EndDe: "20241231"})
+	if errors.Is(err, ErrNoData) {
+		t.Skip("해당 기간 지분증권 신고서 데이터 없음")
+	}
+	require.NoError(t, err)
+	require.NotNil(t, res)
+	for _, it := range res.General {
+		require.NotEmpty(t, it.RceptNo)
+	}
+}
+
+func TestIntegration_DebtSecurities(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+	corp, err := c.ResolveCorpCode(context.Background(), "000660") // SK하이닉스 (회사채 발행 이력)
+	require.NoError(t, err)
+	res, err := c.Registration.DebtSecurities(context.Background(), registration.Params{CorpCode: corp, BgnDe: "20180101", EndDe: "20241231"})
+	if errors.Is(err, ErrNoData) {
+		t.Skip("해당 기간 채무증권 신고서 데이터 없음")
+	}
+	require.NoError(t, err)
+	require.NotNil(t, res)
+	for _, it := range res.General {
+		require.NotEmpty(t, it.RceptNo)
+	}
+}
+
+func TestIntegration_DepositaryReceipts(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+	corp, err := c.ResolveCorpCode(context.Background(), "005930")
+	require.NoError(t, err)
+	res, err := c.Registration.DepositaryReceipts(context.Background(), registration.Params{CorpCode: corp, BgnDe: "20180101", EndDe: "20241231"})
+	if errors.Is(err, ErrNoData) {
+		t.Skip("해당 기간 증권예탁증권 신고서 데이터 없음")
+	}
+	require.NoError(t, err)
+	require.NotNil(t, res)
+	for _, it := range res.General {
 		require.NotEmpty(t, it.RceptNo)
 	}
 }
