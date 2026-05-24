@@ -116,3 +116,36 @@ type TreasuryStockTrustContractItem struct {
 func (c *Client) TreasuryStockTrustContract(ctx context.Context, p MaterialParams) ([]TreasuryStockTrustContractItem, error) {
 	return httpclient.GetList[TreasuryStockTrustContractItem](ctx, c.http, "/api/tsstkAqTrctrCnsDecsn.json", p.toMap())
 }
+
+// TreasuryStockTrustCancellationItem 은 자기주식취득 신탁계약 해지 결정 (tsstkAqTrctrCcDecsn) 한 건.
+type TreasuryStockTrustCancellationItem struct {
+	RceptNo        string `json:"rcept_no"`           // 접수번호
+	CorpCls        string `json:"corp_cls"`           // 법인구분 (Y/K/N/E)
+	CorpCode       string `json:"corp_code"`          // 고유번호
+	CorpName       string `json:"corp_name"`          // 회사명
+	CtrPrcBfcc     string `json:"ctr_prc_bfcc"`       // 계약금액(원)(해지 전)
+	CtrPrcAtcc     string `json:"ctr_prc_atcc"`       // 계약금액(원)(해지 후)
+	CtrPdBfccBgd   string `json:"ctr_pd_bfcc_bgd"`    // 해지 전 계약기간(시작일)
+	CtrPdBfccEdd   string `json:"ctr_pd_bfcc_edd"`    // 해지 전 계약기간(종료일)
+	CcPp           string `json:"cc_pp"`              // 해지목적
+	CcInt          string `json:"cc_int"`             // 해지기관
+	CcPrd          string `json:"cc_prd"`             // 해지예정일자
+	TpRmAtcc       string `json:"tp_rm_atcc"`         // 해지후 신탁재산의 반환방법
+	AqWtnDivOstk   string `json:"aq_wtn_div_ostk"`    // 해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(보통주식))
+	AqWtnDivOstkRt string `json:"aq_wtn_div_ostk_rt"` // 해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율%))
+	AqWtnDivEstk   string `json:"aq_wtn_div_estk"`    // 해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(기타주식))
+	AqWtnDivEstkRt string `json:"aq_wtn_div_estk_rt"` // 해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율%))
+	EaqOstk        string `json:"eaq_ostk"`           // 해지 전 자기주식 보유현황(기타취득(주)(보통주식))
+	EaqOstkRt      string `json:"eaq_ostk_rt"`        // 해지 전 자기주식 보유현황(기타취득(주)(비율%))
+	EaqEstk        string `json:"eaq_estk"`           // 해지 전 자기주식 보유현황(기타취득(주)(기타주식))
+	EaqEstkRt      string `json:"eaq_estk_rt"`        // 해지 전 자기주식 보유현황(기타취득(주)(비율%))
+	Bddd           string `json:"bddd"`               // 이사회결의일(결정일)
+	OdAAtT         string `json:"od_a_at_t"`          // 사외이사 참석여부(참석(명))
+	OdAAtB         string `json:"od_a_at_b"`          // 사외이사 참석여부(불참(명))
+	AdtAAtn        string `json:"adt_a_atn"`          // 감사(사외이사가 아닌 감사위원) 참석여부
+}
+
+// TreasuryStockTrustCancellation 은 자기주식취득 신탁계약 해지 결정(주요사항보고서)을 조회한다.
+func (c *Client) TreasuryStockTrustCancellation(ctx context.Context, p MaterialParams) ([]TreasuryStockTrustCancellationItem, error) {
+	return httpclient.GetList[TreasuryStockTrustCancellationItem](ctx, c.http, "/api/tsstkAqTrctrCcDecsn.json", p.toMap())
+}
