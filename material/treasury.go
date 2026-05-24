@@ -43,3 +43,44 @@ type TreasuryStockAcquisitionItem struct {
 func (c *Client) TreasuryStockAcquisition(ctx context.Context, p MaterialParams) ([]TreasuryStockAcquisitionItem, error) {
 	return httpclient.GetList[TreasuryStockAcquisitionItem](ctx, c.http, "/api/tsstkAqDecsn.json", p.toMap())
 }
+
+// TreasuryStockDisposalItem 은 자기주식 처분 결정 (tsstkDpDecsn) 한 건.
+type TreasuryStockDisposalItem struct {
+	RceptNo        string `json:"rcept_no"`           // 접수번호
+	CorpCls        string `json:"corp_cls"`           // 법인구분 (Y/K/N/E)
+	CorpCode       string `json:"corp_code"`          // 고유번호
+	CorpName       string `json:"corp_name"`          // 회사명
+	DpplnStkOstk   string `json:"dppln_stk_ostk"`     // 처분예정주식(주)(보통주식)
+	DpplnStkEstk   string `json:"dppln_stk_estk"`     // 처분예정주식(주)(기타주식)
+	DpstkPrcOstk   string `json:"dpstk_prc_ostk"`     // 처분 대상 주식가격(원)(보통주식)
+	DpstkPrcEstk   string `json:"dpstk_prc_estk"`     // 처분 대상 주식가격(원)(기타주식)
+	DpplnPrcOstk   string `json:"dppln_prc_ostk"`     // 처분예정금액(원)(보통주식)
+	DpplnPrcEstk   string `json:"dppln_prc_estk"`     // 처분예정금액(원)(기타주식)
+	DpprpdBgd      string `json:"dpprpd_bgd"`         // 처분예정기간(시작일)
+	DpprpdEdd      string `json:"dpprpd_edd"`         // 처분예정기간(종료일)
+	DpPp           string `json:"dp_pp"`              // 처분목적
+	DpMMkt         string `json:"dp_m_mkt"`           // 처분방법(시장을 통한 매도(주))
+	DpMOvtm        string `json:"dp_m_ovtm"`          // 처분방법(시간외대량매매(주))
+	DpMOtc         string `json:"dp_m_otc"`           // 처분방법(장외처분(주))
+	DpMEtc         string `json:"dp_m_etc"`           // 처분방법(기타(주))
+	CsIvBk         string `json:"cs_iv_bk"`           // 위탁투자중개업자
+	AqWtnDivOstk   string `json:"aq_wtn_div_ostk"`    // 처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(보통주식))
+	AqWtnDivOstkRt string `json:"aq_wtn_div_ostk_rt"` // 처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율%))
+	AqWtnDivEstk   string `json:"aq_wtn_div_estk"`    // 처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(기타주식))
+	AqWtnDivEstkRt string `json:"aq_wtn_div_estk_rt"` // 처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율%))
+	EaqOstk        string `json:"eaq_ostk"`           // 처분 전 자기주식 보유현황(기타취득(주)(보통주식))
+	EaqOstkRt      string `json:"eaq_ostk_rt"`        // 처분 전 자기주식 보유현황(기타취득(주)(비율%))
+	EaqEstk        string `json:"eaq_estk"`           // 처분 전 자기주식 보유현황(기타취득(주)(기타주식))
+	EaqEstkRt      string `json:"eaq_estk_rt"`        // 처분 전 자기주식 보유현황(기타취득(주)(비율%))
+	DpDd           string `json:"dp_dd"`              // 처분결정일
+	OdAAtT         string `json:"od_a_at_t"`          // 사외이사 참석여부(참석(명))
+	OdAAtB         string `json:"od_a_at_b"`          // 사외이사 참석여부(불참(명))
+	AdtAAtn        string `json:"adt_a_atn"`          // 감사(사외이사가 아닌 감사위원) 참석여부
+	D1SlodlmOstk   string `json:"d1_slodlm_ostk"`     // 1일 매도 주문수량 한도(보통주식)
+	D1SlodlmEstk   string `json:"d1_slodlm_estk"`     // 1일 매도 주문수량 한도(기타주식)
+}
+
+// TreasuryStockDisposal 은 자기주식 처분 결정(주요사항보고서)을 조회한다.
+func (c *Client) TreasuryStockDisposal(ctx context.Context, p MaterialParams) ([]TreasuryStockDisposalItem, error) {
+	return httpclient.GetList[TreasuryStockDisposalItem](ctx, c.http, "/api/tsstkDpDecsn.json", p.toMap())
+}

@@ -24,3 +24,21 @@ func TestTreasuryStockAcquisition(t *testing.T) {
 	assert.Equal(t, "-", got.AqWtnDivOstkRt)
 	assert.Equal(t, "6,525,123", got.D1ProdlmOstk)
 }
+
+func TestTreasuryStockDisposal(t *testing.T) {
+	c := newTestClient(t, map[string]string{
+		"/api/tsstkDpDecsn.json": "tsstkDpDecsn.json",
+	})
+
+	items, err := c.TreasuryStockDisposal(context.Background(), MaterialParams{CorpCode: "00126380", BgnDe: "20230101", EndDe: "20231231"})
+	require.NoError(t, err)
+	require.Len(t, items, 1)
+
+	got := items[0]
+	assert.Equal(t, "20230610000222", got.RceptNo)
+	assert.Equal(t, "500,000", got.DpplnStkOstk)
+	assert.Equal(t, "37,500,000,000", got.DpplnPrcOstk)
+	assert.Equal(t, "임직원 상여 지급", got.DpPp)
+	assert.Equal(t, "500,000", got.DpMMkt)
+	assert.Equal(t, "125,000", got.D1SlodlmOstk)
+}
