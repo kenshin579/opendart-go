@@ -83,3 +83,61 @@ type CompanyMergerItem struct {
 func (c *Client) CompanyMerger(ctx context.Context, p MaterialParams) ([]CompanyMergerItem, error) {
 	return httpclient.GetList[CompanyMergerItem](ctx, c.http, "/api/cmpMgDecsn.json", p.toMap())
 }
+
+// CompanyDivisionItem 은 회사분할 결정 (cmpDvDecsn) 한 건.
+type CompanyDivisionItem struct {
+	RceptNo               string `json:"rcept_no"`                  // 접수번호
+	CorpCls               string `json:"corp_cls"`                  // 법인구분 (Y/K/N/E)
+	CorpCode              string `json:"corp_code"`                 // 고유번호
+	CorpName              string `json:"corp_name"`                 // 회사명
+	DvMth                 string `json:"dv_mth"`                    // 분할방법
+	DvImpef               string `json:"dv_impef"`                  // 분할의 중요영향 및 효과
+	DvRt                  string `json:"dv_rt"`                     // 분할비율
+	DvTrfbsnprtCn         string `json:"dv_trfbsnprt_cn"`           // 분할로 이전할 사업 및 재산의 내용
+	AtdvExcmpCmpnm        string `json:"atdv_excmp_cmpnm"`          // 분할 후 존속회사(회사명)
+	AtdvfdtlTast          string `json:"atdvfdtl_tast"`             // 분할 후 존속회사 분할후 재무(원)(자산총계)
+	AtdvfdtlTdbt          string `json:"atdvfdtl_tdbt"`             // 분할 후 존속회사 분할후 재무(원)(부채총계)
+	AtdvfdtlTeqt          string `json:"atdvfdtl_teqt"`             // 분할 후 존속회사 분할후 재무(원)(자본총계)
+	AtdvfdtlCpt           string `json:"atdvfdtl_cpt"`              // 분할 후 존속회사 분할후 재무(원)(자본금)
+	AtdvfdtlStd           string `json:"atdvfdtl_std"`              // 분할 후 존속회사 분할후 재무(원)(현재기준)
+	AtdvExcmpExbsnRsl     string `json:"atdv_excmp_exbsn_rsl"`      // 분할 후 존속회사 존속사업부문 최근 사업연도매출액(원)
+	AtdvExcmpMbsn         string `json:"atdv_excmp_mbsn"`           // 분할 후 존속회사(주요사업)
+	AtdvExcmpAtdvLstmnAtn string `json:"atdv_excmp_atdv_lstmn_atn"` // 분할 후 존속회사(분할 후 상장유지 여부)
+	DvfcmpCmpnm           string `json:"dvfcmp_cmpnm"`              // 분할설립회사(회사명)
+	FfdtlTast             string `json:"ffdtl_tast"`                // 분할설립회사 설립시 재무(원)(자산총계)
+	FfdtlTdbt             string `json:"ffdtl_tdbt"`                // 분할설립회사 설립시 재무(원)(부채총계)
+	FfdtlTeqt             string `json:"ffdtl_teqt"`                // 분할설립회사 설립시 재무(원)(자본총계)
+	FfdtlCpt              string `json:"ffdtl_cpt"`                 // 분할설립회사 설립시 재무(원)(자본금)
+	FfdtlStd              string `json:"ffdtl_std"`                 // 분할설립회사 설립시 재무(원)(현재기준)
+	DvfcmpNbsnRsl         string `json:"dvfcmp_nbsn_rsl"`           // 분할설립회사 신설사업부문 최근 사업연도 매출액(원)
+	DvfcmpMbsn            string `json:"dvfcmp_mbsn"`               // 분할설립회사(주요사업)
+	DvfcmpRlstAtn         string `json:"dvfcmp_rlst_atn"`           // 분할설립회사(재상장신청 여부)
+	AbcrCrrt              string `json:"abcr_crrt"`                 // 감자에 관한 사항(감자비율(%))
+	AbcrOsprpdBgd         string `json:"abcr_osprpd_bgd"`           // 감자에 관한 사항(구주권 제출기간(시작일))
+	AbcrOsprpdEdd         string `json:"abcr_osprpd_edd"`           // 감자에 관한 사항(구주권 제출기간(종료일))
+	AbcrTrspprpdBgd       string `json:"abcr_trspprpd_bgd"`         // 감자에 관한 사항(매매거래정지 예정기간(시작일))
+	AbcrTrspprpdEdd       string `json:"abcr_trspprpd_edd"`         // 감자에 관한 사항(매매거래정지 예정기간(종료일))
+	AbcrNstkascnd         string `json:"abcr_nstkascnd"`            // 감자에 관한 사항(신주배정조건)
+	AbcrShstkcntRtAtRs    string `json:"abcr_shstkcnt_rt_at_rs"`    // 감자에 관한 사항(주주 주식수 비례여부 및 사유)
+	AbcrNstkasstd         string `json:"abcr_nstkasstd"`            // 감자에 관한 사항(신주배정기준일)
+	AbcrNstkdlprd         string `json:"abcr_nstkdlprd"`            // 감자에 관한 사항(신주권교부예정일)
+	AbcrNstklstprd        string `json:"abcr_nstklstprd"`           // 감자에 관한 사항(신주의 상장예정일)
+	GmtsckPrd             string `json:"gmtsck_prd"`                // 주주총회 예정일
+	CdobprpdBgd           string `json:"cdobprpd_bgd"`              // 채권자 이의제출기간(시작일)
+	CdobprpdEdd           string `json:"cdobprpd_edd"`              // 채권자 이의제출기간(종료일)
+	Dvdt                  string `json:"dvdt"`                      // 분할기일
+	Dvrgsprd              string `json:"dvrgsprd"`                  // 분할등기 예정일
+	Bddd                  string `json:"bddd"`                      // 이사회결의일(결정일)
+	OdAAtT                string `json:"od_a_at_t"`                 // 사외이사 참석여부(참석(명))
+	OdAAtB                string `json:"od_a_at_b"`                 // 사외이사 참석여부(불참(명))
+	AdtAAtn               string `json:"adt_a_atn"`                 // 감사(사외이사가 아닌 감사위원) 참석여부
+	PoptCtrAtn            string `json:"popt_ctr_atn"`              // 풋옵션 등 계약 체결여부
+	PoptCtrCn             string `json:"popt_ctr_cn"`               // 계약내용
+	RsSmAtn               string `json:"rs_sm_atn"`                 // 증권신고서 제출대상 여부
+	ExSmR                 string `json:"ex_sm_r"`                   // 제출을 면제받은 경우 그 사유
+}
+
+// CompanyDivision 은 회사분할 결정(주요사항보고서)을 조회한다.
+func (c *Client) CompanyDivision(ctx context.Context, p MaterialParams) ([]CompanyDivisionItem, error) {
+	return httpclient.GetList[CompanyDivisionItem](ctx, c.http, "/api/cmpDvDecsn.json", p.toMap())
+}

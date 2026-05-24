@@ -21,3 +21,17 @@ func TestCompanyMerger(t *testing.T) {
 	assert.Equal(t, "2023년 06월 10일", got.MgscGmtsckPrd)
 	assert.Equal(t, "제출", got.RsSmAtn)
 }
+
+func TestCompanyDivision(t *testing.T) {
+	c := newTestClient(t, map[string]string{"/api/cmpDvDecsn.json": "cmpDvDecsn.json"})
+	items, err := c.CompanyDivision(context.Background(), MaterialParams{CorpCode: "00126380", BgnDe: "20230101", EndDe: "20231231"})
+	require.NoError(t, err)
+	require.Len(t, items, 1)
+	got := items[0]
+	assert.Equal(t, "20230510000222", got.RceptNo)
+	assert.Equal(t, "인적분할", got.DvMth)
+	assert.Equal(t, "배터리 사업부문", got.DvTrfbsnprtCn)
+	assert.Equal(t, "30.0", got.AbcrCrrt)
+	assert.Equal(t, "2023년 07월 01일", got.Dvdt)
+	assert.Equal(t, "제출", got.RsSmAtn)
+}
