@@ -1,0 +1,40 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230610000222",
+      "corp_cls": "Y",
+      "corp_code": "00126380",
+      "corp_name": "테스트처분",
+      "dppln_stk_ostk": "500,000",
+      "dppln_stk_estk": "-",
+      "dpstk_prc_ostk": "75,000",
+      "dpstk_prc_estk": "-",
+      "dppln_prc_ostk": "37,500,000,000",
+      "dppln_prc_estk": "-",
+      "dpprpd_bgd": "2023년 06월 11일",
+      "dpprpd_edd": "2023년 09월 10일",
+      "dp_pp": "임직원 상여 지급",
+      "dp_m_mkt": "500,000",
+      "dp_m_ovtm": "-",
+      "dp_m_otc": "-",
+      "dp_m_etc": "-",
+      "cs_iv_bk": "한국투자증권",
+      "aq_wtn_div_ostk": "5,000,000",
+      "aq_wtn_div_ostk_rt": "2.5",
+      "aq_wtn_div_estk": "-",
+      "aq_wtn_div_estk_rt": "-",
+      "eaq_ostk": "-",
+      "eaq_ostk_rt": "-",
+      "eaq_estk": "-",
+      "eaq_estk_rt": "-",
+      "dp_dd": "2023년 06월 10일",
+      "od_a_at_t": "3",
+      "od_a_at_b": "0",
+      "adt_a_atn": "1",
+      "d1_slodlm_ostk": "125,000",
+      "d1_slodlm_estk": "-"
+    }
+  ]
+}

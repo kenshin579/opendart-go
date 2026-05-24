@@ -1,0 +1,37 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20241118000328",
+            "corp_cls": "Y",
+            "corp_code": "00126380",
+            "corp_name": "삼성전자",
+            "od_a_at_t": "6",
+            "od_a_at_b": "-",
+            "adt_a_atn": "-",
+            "aqpln_stk_ostk": "50,144,628",
+            "aqpln_stk_estk": "6,912,036",
+            "aqpln_prc_ostk": "2,682,737,598,000",
+            "aqpln_prc_estk": "317,262,452,400",
+            "aqexpd_bgd": "2024년 11월 18일",
+            "aqexpd_edd": "2025년 02월 17일",
+            "hdexpd_bgd": "-",
+            "hdexpd_edd": "-",
+            "aq_pp": "주주가치 제고 등",
+            "aq_mth": "유가증권시장을 통한 장내 매수",
+            "cs_iv_bk": "삼성증권 (Samsung Securities Co., Ltd.),한국투자증권 (Korea Investment & Securities Co, Ltd.),미래에셋증권 (Mirae Asset Securities Co., Ltd.),신한투자증권 (Shinhan Securities Co.,Ltd),KB증권 (KB Securities Co.Ltd)",
+            "aq_wtn_div_ostk": "-",
+            "aq_wtn_div_ostk_rt": "-",
+            "aq_wtn_div_estk": "-",
+            "aq_wtn_div_estk_rt": "-",
+            "eaq_ostk": "-",
+            "eaq_ostk_rt": "-",
+            "eaq_estk": "-",
+            "eaq_estk_rt": "-",
+            "aq_dd": "2024년 11월 15일",
+            "d1_prodlm_ostk": "6,525,123",
+            "d1_prodlm_estk": "691,203"
+        }
+    ]
+}

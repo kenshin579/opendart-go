@@ -1,0 +1,32 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230910000444",
+      "corp_cls": "Y",
+      "corp_code": "00126380",
+      "corp_name": "테스트신탁해지",
+      "ctr_prc_bfcc": "50,000,000,000",
+      "ctr_prc_atcc": "50,000,000,000",
+      "ctr_pd_bfcc_bgd": "2023년 03월 11일",
+      "ctr_pd_bfcc_edd": "2023년 09월 10일",
+      "cc_pp": "신탁계약 기간 만료",
+      "cc_int": "한국투자증권",
+      "cc_prd": "2023년 09월 11일",
+      "tp_rm_atcc": "현금으로 반환",
+      "aq_wtn_div_ostk": "5,500,000",
+      "aq_wtn_div_ostk_rt": "2.7",
+      "aq_wtn_div_estk": "-",
+      "aq_wtn_div_estk_rt": "-",
+      "eaq_ostk": "-",
+      "eaq_ostk_rt": "-",
+      "eaq_estk": "-",
+      "eaq_estk_rt": "-",
+      "bddd": "2023년 09월 10일",
+      "od_a_at_t": "3",
+      "od_a_at_b": "0",
+      "adt_a_atn": "1"
+    }
+  ]
+}

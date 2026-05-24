@@ -171,3 +171,24 @@ func TestIntegration_ConvertibleBondIssuance(t *testing.T) {
 		require.NotEmpty(t, it.RceptNo)
 	}
 }
+
+func TestIntegration_TreasuryStockAcquisition(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+
+	corp, err := c.ResolveCorpCode(context.Background(), "005930")
+	require.NoError(t, err)
+
+	items, err := c.Material.TreasuryStockAcquisition(context.Background(), material.MaterialParams{
+		CorpCode: corp,
+		BgnDe:    "20200101",
+		EndDe:    "20241231",
+	})
+	if errors.Is(err, ErrNoData) {
+		t.Skip("해당 기간 자기주식 취득 데이터 없음")
+	}
+	require.NoError(t, err)
+	for _, it := range items {
+		require.NotEmpty(t, it.RceptNo)
+	}
+}
