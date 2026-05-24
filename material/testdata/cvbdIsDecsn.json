@@ -1,0 +1,27 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230815000123",
+      "corp_cls": "Y",
+      "corp_code": "00126380",
+      "corp_name": "테스트전환사채",
+      "bd_tm": "10",
+      "bd_knd": "기명식 무보증 사모 전환사채",
+      "bd_fta": "30,000,000,000",
+      "atcsc_rmislmt": "100,000,000,000",
+      "ovis_fta": "-", "ovis_fta_crn": "-", "ovis_ster": "-", "ovis_isar": "-", "ovis_mktnm": "-",
+      "fdpp_fclt": "-", "fdpp_bsninh": "-", "fdpp_op": "30,000,000,000", "fdpp_dtrp": "-", "fdpp_ocsa": "-", "fdpp_etc": "-",
+      "bd_intr_ex": "0.0", "bd_intr_sf": "2.0",
+      "bd_mtd": "2028년 08월 16일", "bdis_mthn": "사모",
+      "cv_rt": "100", "cv_prc": "15,000", "cvisstk_knd": "기명식 보통주", "cvisstk_cnt": "2,000,000", "cvisstk_tisstk_vs": "3.5",
+      "cvrqpd_bgd": "2024년 08월 16일", "cvrqpd_edd": "2028년 07월 16일",
+      "act_mktprcfl_cvprc_lwtrsprc": "10,500", "act_mktprcfl_cvprc_lwtrsprc_bs": "전환가액의 70%", "rmislmt_lt70p": "-",
+      "abmg": "-",
+      "sbd": "2023년 08월 16일", "pymd": "2023년 08월 16일", "rpmcmp": "-", "grint": "-",
+      "bddd": "2023년 08월 15일", "od_a_at_t": "3", "od_a_at_b": "0", "adt_a_atn": "1",
+      "rs_sm_atn": "미제출", "ex_sm_r": "사모발행", "ovis_ltdtl": "-", "ftc_stt_atn": "미해당"
+    }
+  ]
+}
