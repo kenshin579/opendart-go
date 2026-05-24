@@ -87,3 +87,59 @@ type DissolutionItem struct {
 func (c *Client) DissolutionCauses(ctx context.Context, p MaterialParams) ([]DissolutionItem, error) {
 	return httpclient.GetList[DissolutionItem](ctx, c.http, "/api/dsRsOcr.json", p.toMap())
 }
+
+// CreditorBankMgmtStartItem 은 채권은행 등의 관리절차 개시 (bnkMngtPcbg) 한 건.
+type CreditorBankMgmtStartItem struct {
+	RceptNo    string `json:"rcept_no"`     // 접수번호
+	CorpCls    string `json:"corp_cls"`     // 법인구분 (Y/K/N/E)
+	CorpCode   string `json:"corp_code"`    // 고유번호
+	CorpName   string `json:"corp_name"`    // 회사명
+	MngtPcbgDd string `json:"mngt_pcbg_dd"` // 관리절차개시 결정일자
+	MngtInt    string `json:"mngt_int"`     // 관리기관
+	MngtPd     string `json:"mngt_pd"`      // 관리기간
+	MngtRs     string `json:"mngt_rs"`      // 관리사유
+	Cfd        string `json:"cfd"`          // 확인일자
+}
+
+// CreditorBankManagementStart 는 채권은행 등의 관리절차 개시를 조회한다.
+func (c *Client) CreditorBankManagementStart(ctx context.Context, p MaterialParams) ([]CreditorBankMgmtStartItem, error) {
+	return httpclient.GetList[CreditorBankMgmtStartItem](ctx, c.http, "/api/bnkMngtPcbg.json", p.toMap())
+}
+
+// CreditorBankMgmtStopItem 은 채권은행 등의 관리절차 중단 (bnkMngtPcsp) 한 건.
+type CreditorBankMgmtStopItem struct {
+	RceptNo    string `json:"rcept_no"`     // 접수번호
+	CorpCls    string `json:"corp_cls"`     // 법인구분 (Y/K/N/E)
+	CorpCode   string `json:"corp_code"`    // 고유번호
+	CorpName   string `json:"corp_name"`    // 회사명
+	MngtPcspDd string `json:"mngt_pcsp_dd"` // 관리절차중단 결정일자
+	MngtInt    string `json:"mngt_int"`     // 관리기관
+	SpRs       string `json:"sp_rs"`        // 중단사유
+	FtCtp      string `json:"ft_ctp"`       // 향후대책
+	Cfd        string `json:"cfd"`          // 확인일자
+}
+
+// CreditorBankManagementStop 은 채권은행 등의 관리절차 중단을 조회한다.
+func (c *Client) CreditorBankManagementStop(ctx context.Context, p MaterialParams) ([]CreditorBankMgmtStopItem, error) {
+	return httpclient.GetList[CreditorBankMgmtStopItem](ctx, c.http, "/api/bnkMngtPcsp.json", p.toMap())
+}
+
+// LawsuitItem 은 소송 등의 제기 (lwstLg) 한 건.
+type LawsuitItem struct {
+	RceptNo  string `json:"rcept_no"`  // 접수번호
+	CorpCls  string `json:"corp_cls"`  // 법인구분 (Y/K/N/E)
+	CorpCode string `json:"corp_code"` // 고유번호
+	CorpName string `json:"corp_name"` // 회사명
+	Icnm     string `json:"icnm"`      // 사건의 명칭
+	AcAp     string `json:"ac_ap"`     // 원고·신청인
+	RqCn     string `json:"rq_cn"`     // 청구내용
+	Cpct     string `json:"cpct"`      // 관할법원
+	FtCtp    string `json:"ft_ctp"`    // 향후대책
+	Lgd      string `json:"lgd"`       // 제기일자
+	Cfd      string `json:"cfd"`       // 확인일자
+}
+
+// Lawsuits 는 소송 등의 제기를 조회한다.
+func (c *Client) Lawsuits(ctx context.Context, p MaterialParams) ([]LawsuitItem, error) {
+	return httpclient.GetList[LawsuitItem](ctx, c.http, "/api/lwstLg.json", p.toMap())
+}
