@@ -1,0 +1,23 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20240312000736",
+            "corp_cls": "Y",
+            "corp_code": "00126380",
+            "corp_name": "삼성전자",
+            "sm": "-",
+            "remndr_exprtn1": "미상환잔액",
+            "remndr_exprtn2": "공모",
+            "de10_below": "-",
+            "de10_excess_de30_below": "-",
+            "de30_excess_de90_below": "-",
+            "de90_excess_de180_below": "-",
+            "de180_excess_yy1_below": "-",
+            "isu_lmt": "-",
+            "remndr_lmt": "-",
+            "stlm_dt": "2023-12-31"
+        }
+    ]
+}
