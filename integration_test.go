@@ -139,3 +139,16 @@ func TestIntegration_DefaultOccurrences(t *testing.T) {
 	require.NoError(t, err)
 	require.NotEmpty(t, items)
 }
+
+func TestIntegration_PaidInCapitalIncrease(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+
+	items, err := c.Material.PaidInCapitalIncrease(context.Background(), material.MaterialParams{
+		CorpCode: "00107598", // 남양유업 (실제 유상증자 사례)
+		BgnDe:    "20230101",
+		EndDe:    "20231231",
+	})
+	require.NoError(t, err)
+	require.NotEmpty(t, items)
+}
