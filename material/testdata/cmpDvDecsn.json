@@ -1,0 +1,16 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230510000222", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트회사분할",
+      "dv_mth": "인적분할", "dv_impef": "사업 전문화", "dv_rt": "0.7:0.3", "dv_trfbsnprt_cn": "배터리 사업부문",
+      "atdv_excmp_cmpnm": "존속회사", "atdvfdtl_tast": "2,000,000,000,000", "atdvfdtl_tdbt": "800,000,000,000", "atdvfdtl_teqt": "1,200,000,000,000", "atdvfdtl_cpt": "100,000,000,000", "atdvfdtl_std": "2022년 12월 31일", "atdv_excmp_exbsn_rsl": "1,500,000,000,000", "atdv_excmp_mbsn": "전자", "atdv_excmp_atdv_lstmn_atn": "예",
+      "dvfcmp_cmpnm": "신설회사", "ffdtl_tast": "1,000,000,000,000", "ffdtl_tdbt": "300,000,000,000", "ffdtl_teqt": "700,000,000,000", "ffdtl_cpt": "50,000,000,000", "ffdtl_std": "2023년 07월 01일", "dvfcmp_nbsn_rsl": "500,000,000,000", "dvfcmp_mbsn": "배터리", "dvfcmp_rlst_atn": "예",
+      "abcr_crrt": "30.0", "abcr_osprpd_bgd": "2023년 06월 01일", "abcr_osprpd_edd": "2023년 06월 14일", "abcr_trspprpd_bgd": "2023년 06월 28일", "abcr_trspprpd_edd": "2023년 07월 03일", "abcr_nstkascnd": "분할비율에 따라 배정", "abcr_shstkcnt_rt_at_rs": "비례 배정", "abcr_nstkasstd": "2023년 06월 30일", "abcr_nstkdlprd": "2023년 07월 14일", "abcr_nstklstprd": "2023년 07월 17일",
+      "gmtsck_prd": "2023년 05월 30일", "cdobprpd_bgd": "2023년 05월 31일", "cdobprpd_edd": "2023년 06월 30일", "dvdt": "2023년 07월 01일", "dvrgsprd": "2023년 07월 03일",
+      "bddd": "2023년 05월 10일", "od_a_at_t": "3", "od_a_at_b": "0", "adt_a_atn": "1",
+      "popt_ctr_atn": "아니오", "popt_ctr_cn": "-", "rs_sm_atn": "제출", "ex_sm_r": "-"
+    }
+  ]
+}

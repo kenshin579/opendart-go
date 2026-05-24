@@ -1,0 +1,21 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230410000111", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트회사합병",
+      "mg_mth": "흡수합병", "mg_stn": "소규모합병", "mg_pp": "경영효율화", "mg_rt": "1:0.5", "mg_rt_bs": "본질가치 평가",
+      "exevl_atn": "예", "exevl_bs_rs": "자본시장법", "exevl_intn": "삼일회계법인", "exevl_pd": "2023년 03월", "exevl_op": "적정",
+      "mgnstk_ostk_cnt": "1,000,000", "mgnstk_cstk_cnt": "-",
+      "mgptncmp_cmpnm": "합병상대회사", "mgptncmp_mbsn": "제조", "mgptncmp_rl_cmpn": "특수관계 없음",
+      "rbsnfdtl_tast": "500,000,000,000", "rbsnfdtl_tdbt": "200,000,000,000", "rbsnfdtl_teqt": "300,000,000,000", "rbsnfdtl_cpt": "50,000,000,000", "rbsnfdtl_sl": "400,000,000,000", "rbsnfdtl_nic": "30,000,000,000",
+      "eadtat_intn": "한영회계법인", "eadtat_op": "적정",
+      "nmgcmp_cmpnm": "-", "ffdtl_tast": "-", "ffdtl_tdbt": "-", "ffdtl_teqt": "-", "ffdtl_cpt": "-", "ffdtl_std": "-", "nmgcmp_nbsn_rsl": "-", "nmgcmp_mbsn": "-", "nmgcmp_rlst_atn": "-",
+      "mgsc_mgctrd": "2023년 04월 10일", "mgsc_shddstd": "2023년 05월 10일", "mgsc_shclspd_bgd": "2023년 05월 11일", "mgsc_shclspd_edd": "2023년 05월 15일", "mgsc_mgop_rcpd_bgd": "2023년 05월 16일", "mgsc_mgop_rcpd_edd": "2023년 06월 05일", "mgsc_gmtsck_prd": "2023년 06월 10일", "mgsc_aprskh_expd_bgd": "2023년 06월 10일", "mgsc_aprskh_expd_edd": "2023년 06월 30일", "mgsc_osprpd_bgd": "2023년 07월 01일", "mgsc_osprpd_edd": "2023년 07월 14일", "mgsc_trspprpd_bgd": "2023년 07월 13일", "mgsc_trspprpd_edd": "2023년 07월 28일", "mgsc_cdobprpd_bgd": "2023년 06월 11일", "mgsc_cdobprpd_edd": "2023년 07월 11일", "mgsc_mgdt": "2023년 07월 15일", "mgsc_ergmd": "2023년 07월 20일", "mgsc_mgrgsprd": "2023년 07월 25일", "mgsc_nstkdlprd": "2023년 07월 28일", "mgsc_nstklstprd": "2023년 07월 29일",
+      "bdlst_atn": "아니오", "otcpr_bdlst_sf_atn": "해당없음",
+      "aprskh_plnprc": "65,000", "aprskh_pym_plpd_mth": "2023년 07월, 현금", "aprskh_ctref": "-",
+      "bddd": "2023년 04월 10일", "od_a_at_t": "3", "od_a_at_b": "0", "adt_a_atn": "1",
+      "popt_ctr_atn": "아니오", "popt_ctr_cn": "-", "rs_sm_atn": "제출", "ex_sm_r": "-"
+    }
+  ]
+}
