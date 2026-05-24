@@ -1,0 +1,19 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "rcept_no": "20240312000736",
+            "corp_cls": "Y",
+            "corp_code": "00126380",
+            "corp_name": "삼성전자",
+            "bsns_year": "제55기(당기)",
+            "adtor": "삼정회계법인",
+            "adt_opinion": "적정",
+            "adt_reprt_spcmnt_matter": "-",
+            "emphs_matter": "해당사항 없음",
+            "core_adt_matter": "메모리 반도체 재고자산 순실현가치 평가",
+            "stlm_dt": "2023-12-31"
+        }
+    ]
+}
