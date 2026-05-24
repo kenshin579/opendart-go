@@ -1,0 +1,25 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230610000333", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트분할합병",
+      "dvmg_mth": "분할합병", "dvmg_impef": "사업 재편",
+      "dv_trfbsnprt_cn": "물류 사업부문",
+      "atdv_excmp_cmpnm": "존속회사", "atdvfdtl_tast": "2,000,000,000,000", "atdvfdtl_tdbt": "-", "atdvfdtl_teqt": "-", "atdvfdtl_cpt": "-", "atdvfdtl_std": "-", "atdv_excmp_exbsn_rsl": "-", "atdv_excmp_mbsn": "전자", "atdv_excmp_atdv_lstmn_atn": "예",
+      "dvfcmp_cmpnm": "분할설립회사", "ffdtl_tast": "-", "ffdtl_tdbt": "-", "ffdtl_teqt": "-", "ffdtl_cpt": "-", "ffdtl_std": "-", "dvfcmp_nbsn_rsl": "-", "dvfcmp_mbsn": "물류", "dvfcmp_atdv_lstmn_at": "아니오",
+      "abcr_crrt": "20.0", "abcr_osprpd_bgd": "-", "abcr_osprpd_edd": "-", "abcr_trspprpd_bgd": "-", "abcr_trspprpd_edd": "-", "abcr_nstkascnd": "-", "abcr_shstkcnt_rt_at_rs": "-", "abcr_nstkasstd": "-", "abcr_nstkdlprd": "-", "abcr_nstklstprd": "-",
+      "mg_stn": "흡수합병", "mgptncmp_cmpnm": "합병상대회사", "mgptncmp_mbsn": "물류", "mgptncmp_rl_cmpn": "특수관계 없음",
+      "rbsnfdtl_tast": "800,000,000,000", "rbsnfdtl_tdbt": "-", "rbsnfdtl_teqt": "-", "rbsnfdtl_cpt": "-", "rbsnfdtl_sl": "-", "rbsnfdtl_nic": "-", "eadtat_intn": "삼정회계법인", "eadtat_op": "적정",
+      "dvmgnstk_ostk_cnt": "2,000,000", "dvmgnstk_cstk_cnt": "-",
+      "nmgcmp_cmpnm": "-", "nmgcmp_cpt": "-", "nmgcmp_mbsn": "-", "nmgcmp_rlst_atn": "-",
+      "dvmg_rt": "1:0.8", "dvmg_rt_bs": "본질가치 평가",
+      "exevl_atn": "예", "exevl_bs_rs": "자본시장법", "exevl_intn": "삼일회계법인", "exevl_pd": "2023년 05월", "exevl_op": "적정",
+      "dvmgsc_dvmgctrd": "2023년 06월 10일", "dvmgsc_shddstd": "2023년 06월 30일", "dvmgsc_shclspd_bgd": "-", "dvmgsc_shclspd_edd": "-", "dvmgsc_dvmgop_rcpd_bgd": "-", "dvmgsc_dvmgop_rcpd_edd": "-", "dvmgsc_gmtsck_prd": "2023년 07월 20일", "dvmgsc_aprskh_expd_bgd": "-", "dvmgsc_aprskh_expd_edd": "-", "dvmgsc_cdobprpd_bgd": "-", "dvmgsc_cdobprpd_edd": "-", "dvmgsc_dvmgdt": "2023년 08월 01일", "dvmgsc_ergmd": "-", "dvmgsc_dvmgrgsprd": "2023년 08월 05일",
+      "bdlst_atn": "아니오", "otcpr_bdlst_sf_atn": "해당없음",
+      "aprskh_exrq": "-", "aprskh_plnprc": "70,000", "aprskh_ex_pc_mth_pd_pl": "-", "aprskh_pym_plpd_mth": "2023년 08월, 현금", "aprskh_lmt": "-", "aprskh_ctref": "-",
+      "bddd": "2023년 06월 10일", "od_a_at_t": "3", "od_a_at_b": "0", "adt_a_atn": "1",
+      "popt_ctr_atn": "아니오", "popt_ctr_cn": "-", "rs_sm_atn": "제출", "ex_sm_r": "-"
+    }
+  ]
+}
