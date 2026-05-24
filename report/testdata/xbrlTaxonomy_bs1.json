@@ -1,0 +1,16 @@
+{
+    "status": "000",
+    "message": "정상",
+    "list": [
+        {
+            "sj_div": "BS1",
+            "bsns_de": "20180701",
+            "account_id": "ifrs_CurrentAssets",
+            "account_nm": "CurrentAssets",
+            "label_kor": "유동자산",
+            "label_eng": "Current assets",
+            "data_tp": "X",
+            "ifrs_ref": "K-IFRS 1001 문단 60"
+        }
+    ]
+}
