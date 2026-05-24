@@ -65,3 +65,22 @@ func TestExchangeableBondIssuance(t *testing.T) {
 	assert.Equal(t, "2024년 07월 06일", got.ExrqpdBgd)
 	assert.Equal(t, "미해당", got.FtcSttAtn)
 }
+
+func TestContingentConvertibleBondIssuance(t *testing.T) {
+	c := newTestClient(t, map[string]string{
+		"/api/wdCocobdIsDecsn.json": "wdCocobdIsDecsn.json",
+	})
+
+	items, err := c.ContingentConvertibleBondIssuance(context.Background(), MaterialParams{CorpCode: "00164779", BgnDe: "20230101", EndDe: "20231231"})
+	require.NoError(t, err)
+	require.Len(t, items, 1)
+
+	got := items[0]
+	assert.Equal(t, "20230601000444", got.RceptNo)
+	assert.Equal(t, "100,000,000,000", got.BdFta)
+	assert.Equal(t, "4.5", got.BdIntrSf) // 표면이자율 (이 struct 에선 sf/ex 라벨이 다른 3종과 반대)
+	assert.Equal(t, "4.5", got.BdIntrEx) // 만기이자율
+	assert.Contains(t, got.DbtrsSc, "부실금융기관")
+	assert.Equal(t, "제출", got.RsSmAtn)
+	assert.Equal(t, "미해당", got.FtcSttAtn)
+}
