@@ -4,6 +4,7 @@ package opendart
 
 import (
 	"context"
+	"errors"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -151,4 +152,22 @@ func TestIntegration_PaidInCapitalIncrease(t *testing.T) {
 	})
 	require.NoError(t, err)
 	require.NotEmpty(t, items)
+}
+
+func TestIntegration_ConvertibleBondIssuance(t *testing.T) {
+	c, err := NewClientFromEnv(WithCorpCodeCacheDir(t.TempDir()))
+	require.NoError(t, err)
+
+	items, err := c.Material.ConvertibleBondIssuance(context.Background(), material.MaterialParams{
+		CorpCode: "00126380", // 삼성전자 (전환사채 발행 사례 없을 수 있음 → ErrNoData 허용)
+		BgnDe:    "20200101",
+		EndDe:    "20241231",
+	})
+	if errors.Is(err, ErrNoData) {
+		t.Skip("해당 기간 전환사채 발행 데이터 없음")
+	}
+	require.NoError(t, err)
+	for _, it := range items {
+		require.NotEmpty(t, it.RceptNo)
+	}
 }

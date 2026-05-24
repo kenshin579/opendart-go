@@ -1,0 +1,25 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230705000333",
+      "corp_cls": "Y",
+      "corp_code": "00126380",
+      "corp_name": "테스트교환사채",
+      "bd_tm": "3",
+      "bd_knd": "기명식 무보증 사모 교환사채",
+      "bd_fta": "50,000,000,000",
+      "ovis_fta": "-", "ovis_fta_crn": "-", "ovis_ster": "-", "ovis_isar": "-", "ovis_mktnm": "-",
+      "fdpp_fclt": "-", "fdpp_bsninh": "-", "fdpp_op": "-", "fdpp_dtrp": "50,000,000,000", "fdpp_ocsa": "-", "fdpp_etc": "-",
+      "bd_intr_ex": "0.0", "bd_intr_sf": "1.5",
+      "bd_mtd": "2027년 07월 06일", "bdis_mthn": "사모",
+      "ex_rt": "100", "ex_prc": "25,000", "ex_prc_dmth": "이사회결의일 전 기산일 가중산술평균주가",
+      "extg": "자기주식(기명식 보통주)", "extg_stkcnt": "2,000,000", "extg_tisstk_vs": "2.8",
+      "exrqpd_bgd": "2024년 07월 06일", "exrqpd_edd": "2027년 06월 06일",
+      "sbd": "2023년 07월 06일", "pymd": "2023년 07월 06일", "rpmcmp": "-", "grint": "-",
+      "bddd": "2023년 07월 05일", "od_a_at_t": "3", "od_a_at_b": "0", "adt_a_atn": "1",
+      "rs_sm_atn": "미제출", "ex_sm_r": "사모발행", "ovis_ltdtl": "-", "ftc_stt_atn": "미해당"
+    }
+  ]
+}

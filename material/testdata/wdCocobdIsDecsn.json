@@ -1,0 +1,23 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230601000444",
+      "corp_cls": "Y",
+      "corp_code": "00164779",
+      "corp_name": "테스트조건부자본증권",
+      "bd_tm": "1",
+      "bd_knd": "기명식 무보증 상각형 조건부자본증권",
+      "bd_fta": "100,000,000,000",
+      "ovis_fta": "-", "ovis_fta_crn": "-", "ovis_ster": "-", "ovis_isar": "-", "ovis_mktnm": "-",
+      "fdpp_fclt": "-", "fdpp_bsninh": "-", "fdpp_op": "100,000,000,000", "fdpp_dtrp": "-", "fdpp_ocsa": "-", "fdpp_etc": "-",
+      "bd_intr_sf": "4.5", "bd_intr_ex": "4.5",
+      "bd_mtd": "2053년 06월 02일",
+      "dbtrs_sc": "발행회사가 부실금융기관으로 지정되는 경우 사채의 상환 및 이자지급의무가 전액 영구적으로 감면됨",
+      "sbd": "2023년 06월 02일", "pymd": "2023년 06월 02일", "rpmcmp": "-", "grint": "-",
+      "bddd": "2023년 06월 01일", "od_a_at_t": "4", "od_a_at_b": "0", "adt_a_atn": "1",
+      "rs_sm_atn": "제출", "ex_sm_r": "-", "ovis_ltdtl": "-", "ftc_stt_atn": "미해당"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "000",
+  "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230910000222",
+      "corp_cls": "K",
+      "corp_code": "00164779",
+      "corp_name": "테스트신주인수권부사채",
+      "bd_tm": "5",
+      "bd_knd": "기명식 무보증 분리형 신주인수권부사채",
+      "bd_fta": "20,000,000,000",
+      "atcsc_rmislmt": "80,000,000,000",
+      "ovis_fta": "-", "ovis_fta_crn": "-", "ovis_ster": "-", "ovis_isar": "-", "ovis_mktnm": "-",
+      "fdpp_fclt": "10,000,000,000", "fdpp_bsninh": "-", "fdpp_op": "10,000,000,000", "fdpp_dtrp": "-", "fdpp_ocsa": "-", "fdpp_etc": "-",
+      "bd_intr_ex": "1.0", "bd_intr_sf": "3.0",
+      "bd_mtd": "2026년 09월 12일", "bdis_mthn": "사모",
+      "ex_rt": "100", "ex_prc": "8,000", "ex_prc_dmth": "이사회결의일 전 기산일 가중산술평균주가",
+      "bdwt_div_atn": "분리형", "nstk_pym_mth": "현금납입",
+      "nstk_isstk_knd": "기명식 보통주", "nstk_isstk_cnt": "2,500,000", "nstk_isstk_tisstk_vs": "4.0",
+      "expd_bgd": "2024년 09월 12일", "expd_edd": "2026년 08월 12일",
+      "act_mktprcfl_cvprc_lwtrsprc": "5,600", "act_mktprcfl_cvprc_lwtrsprc_bs": "행사가액의 70%", "rmislmt_lt70p": "-",
+      "abmg": "-",
+      "sbd": "2023년 09월 12일", "pymd": "2023년 09월 12일", "rpmcmp": "-", "grint": "-",
+      "bddd": "2023년 09월 10일", "od_a_at_t": "2", "od_a_at_b": "1", "adt_a_atn": "1",
+      "rs_sm_atn": "미제출", "ex_sm_r": "사모발행", "ovis_ltdtl": "-", "ftc_stt_atn": "미해당"
+    }
+  ]
+}
