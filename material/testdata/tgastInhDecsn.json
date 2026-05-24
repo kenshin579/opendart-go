@@ -1,0 +1,19 @@
+{
+  "status": "000", "message": "정상",
+  "list": [
+    {
+      "rcept_no": "20230610000333", "corp_cls": "Y", "corp_code": "00126380", "corp_name": "테스트유형자산양수",
+      "ast_sen": "토지 및 건물", "ast_nm": "평택 공장부지",
+      "inhdtl_inhprc": "150,000,000,000", "inhdtl_tast": "3,000,000,000,000", "inhdtl_tast_vs": "5.0",
+      "inh_pp": "생산능력 확충", "inh_af": "생산설비 증대",
+      "inh_prd_ctr_cnsd": "2023년 06월 10일", "inh_prd_inh_std": "2023년 07월 31일", "inh_prd_rgs_prd": "2023년 08월 15일",
+      "dlptn_cmpnm": "매도법인", "dlptn_cpt": "20,000,000,000", "dlptn_mbsn": "부동산", "dlptn_hoadd": "경기도 평택시", "dlptn_rl_cmpn": "특수관계 없음",
+      "dl_pym": "현금 지급",
+      "exevl_atn": "예", "exevl_bs_rs": "감정평가", "exevl_intn": "한국감정원", "exevl_pd": "2023년 05월", "exevl_op": "적정",
+      "gmtsck_spd_atn": "아니오", "gmtsck_prd": "-",
+      "aprskh_exrq": "-", "aprskh_plnprc": "-", "aprskh_ex_pc_mth_pd_pl": "-", "aprskh_pym_plpd_mth": "-", "aprskh_lmt": "-", "aprskh_ctref": "-",
+      "bddd": "2023년 06월 10일", "od_a_at_t": "3", "od_a_at_b": "0", "adt_a_atn": "1",
+      "ftc_stt_atn": "미해당", "popt_ctr_atn": "아니오", "popt_ctr_cn": "-"
+    }
+  ]
+}

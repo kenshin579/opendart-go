@@ -33,3 +33,16 @@ func TestBusinessTransfer(t *testing.T) {
 	assert.Equal(t, "안진회계법인", got.ExevlIntn)
 	assert.Equal(t, "미해당", got.FtcSttAtn)
 }
+
+func TestTangibleAssetAcquisition(t *testing.T) {
+	c := newTestClient(t, map[string]string{"/api/tgastInhDecsn.json": "tgastInhDecsn.json"})
+	items, err := c.TangibleAssetAcquisition(context.Background(), MaterialParams{CorpCode: "00126380", BgnDe: "20230101", EndDe: "20231231"})
+	require.NoError(t, err)
+	require.Len(t, items, 1)
+	got := items[0]
+	assert.Equal(t, "20230610000333", got.RceptNo)
+	assert.Equal(t, "토지 및 건물", got.AstSen)
+	assert.Equal(t, "150,000,000,000", got.InhdtlInhprc)
+	assert.Equal(t, "한국감정원", got.ExevlIntn)
+	assert.Equal(t, "미해당", got.FtcSttAtn)
+}
