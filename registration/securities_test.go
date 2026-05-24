@@ -8,6 +8,22 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestDebtSecurities(t *testing.T) {
+	c := newTestClient(t, "bdRs.json")
+	res, err := c.DebtSecurities(context.Background(), Params{CorpCode: "00164779", BgnDe: "20180101", EndDe: "20241231"})
+	require.NoError(t, err)
+	require.NotNil(t, res)
+	require.Len(t, res.General, 22)
+	require.Len(t, res.Underwriters, 100)
+	require.Len(t, res.FundUsage, 48)
+	require.Len(t, res.Sellers, 23)
+	assert.Equal(t, "20180312000588", res.General[0].RceptNo)
+	assert.Equal(t, "218", res.General[0].Tm)
+	assert.Equal(t, "무보증사채", res.General[0].Bdnmn)
+	assert.Equal(t, "SK하이닉스", res.General[0].CorpName)
+	assert.Equal(t, "운영자금", res.FundUsage[0].Se)
+}
+
 func TestEquitySecurities(t *testing.T) {
 	c := newTestClient(t, "estkRs.json")
 	res, err := c.EquitySecurities(context.Background(), Params{CorpCode: "00107598", BgnDe: "20230101", EndDe: "20231231"})
