@@ -59,3 +59,7 @@ DS001~DS006 의 세부 엔드포인트를 거의 모두 제공한다. 각 항목
 ```bash
 OPENDART_API_KEY=... go run ./examples/disclosure
 ```
+
+## License
+
+Released under the [MIT License](LICENSE).
