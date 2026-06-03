@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // RestructuringGeneralItem 은 증권신고서(합병/분할/교환이전) 일반사항 그룹 항목.

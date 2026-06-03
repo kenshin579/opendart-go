@@ -5,7 +5,7 @@ package report
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // Client 는 정기보고서 주요정보 sub-client.

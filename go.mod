@@ -1,4 +1,4 @@
-module github.com/kenshin579/opendart
+module github.com/kenshin579/opendart-go
 
 go 1.25.0
 

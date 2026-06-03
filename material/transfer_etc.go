@@ -3,7 +3,7 @@ package material
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // OtherAssetTransferPutbackOptionItem 은 자산양수도(기타), 풋백옵션 (astInhtrfEtcPtbkOpt) 한 건.

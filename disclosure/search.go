@@ -4,7 +4,7 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // SearchParams 는 공시검색 (list.json) 요청 인자. 빈 값/0 은 쿼리에서 생략한다.

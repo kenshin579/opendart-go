@@ -3,7 +3,7 @@ package opendart
 import (
 	"errors"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // APIError 는 OpenDART status != "000" 응답. errors.As 로 Status/Message 접근.

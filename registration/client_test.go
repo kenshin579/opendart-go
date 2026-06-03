@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // newTestClient 는 지정한 testdata fixture 를 모든 요청에 서빙하는 registration.Client 를 만든다.

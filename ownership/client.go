@@ -2,7 +2,7 @@
 // opendart.Client.Ownership 로 접근한다.
 package ownership
 
-import "github.com/kenshin579/opendart/internal/httpclient"
+import "github.com/kenshin579/opendart-go/internal/httpclient"
 
 // Client 는 지분공시 종합정보 sub-client.
 type Client struct {

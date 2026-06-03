@@ -3,7 +3,7 @@ package opendart
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/corpcode"
+	"github.com/kenshin579/opendart-go/internal/corpcode"
 )
 
 // CorpCodeEntry 는 corp_code 매핑의 한 회사. (internal 타입 별칭 — 외부에서 opendart.CorpCodeEntry 로 사용)

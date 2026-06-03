@@ -3,7 +3,7 @@ package material
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // BusinessAcquisitionItem 은 영업양수 결정 (bsnInhDecsn) 한 건.

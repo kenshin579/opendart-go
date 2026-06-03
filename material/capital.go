@@ -3,7 +3,7 @@ package material
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // PaidInCapitalIncreaseItem 은 유상증자 결정 (piicDecsn) 한 건.
