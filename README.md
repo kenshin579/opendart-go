@@ -1,11 +1,11 @@
-# opendart
+# opendart-go
 
 DART 전자공시시스템 OpenAPI 의 Go 클라이언트 라이브러리.
 
 ## 설치
 
 ```bash
-go get github.com/kenshin579/opendart@v0.1.1
+go get github.com/kenshin579/opendart-go@latest
 ```
 
 ## 사용
