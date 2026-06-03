@@ -10,8 +10,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/kenshin579/opendart"
-	"github.com/kenshin579/opendart/disclosure"
+	"github.com/kenshin579/opendart-go"
+	"github.com/kenshin579/opendart-go/disclosure"
 )
 
 func main() {

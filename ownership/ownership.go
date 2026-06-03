@@ -3,7 +3,7 @@ package ownership
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // MajorStockItem 은 대량보유 상황보고 (majorstock) 한 건.

@@ -9,9 +9,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/kenshin579/opendart/material"
-	"github.com/kenshin579/opendart/registration"
-	"github.com/kenshin579/opendart/report"
+	"github.com/kenshin579/opendart-go/material"
+	"github.com/kenshin579/opendart-go/registration"
+	"github.com/kenshin579/opendart-go/report"
 )
 
 // 실행: OPENDART_API_KEY=... go test -tags integration -run TestIntegration -v

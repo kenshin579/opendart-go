@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/kenshin579/opendart"
-	"github.com/kenshin579/opendart/report"
+	"github.com/kenshin579/opendart-go"
+	"github.com/kenshin579/opendart-go/report"
 )
 
 func main() {

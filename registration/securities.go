@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // RsGeneralItem 은 증권신고서 일반사항 그룹 항목(지분증권/증권예탁증권 공통).

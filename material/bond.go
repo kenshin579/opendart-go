@@ -3,7 +3,7 @@ package material
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // ConvertibleBondItem 은 전환사채권 발행결정 (cvbdIsDecsn) 한 건.

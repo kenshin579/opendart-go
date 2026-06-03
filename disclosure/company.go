@@ -3,7 +3,7 @@ package disclosure
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // Company 는 기업개황 (company.json) 응답.

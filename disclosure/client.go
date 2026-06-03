@@ -2,7 +2,7 @@
 // opendart.Client.Disclosure 로 접근한다.
 package disclosure
 
-import "github.com/kenshin579/opendart/internal/httpclient"
+import "github.com/kenshin579/opendart-go/internal/httpclient"
 
 // Client 는 공시정보 sub-client.
 type Client struct {

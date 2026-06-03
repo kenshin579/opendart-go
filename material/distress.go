@@ -3,7 +3,7 @@ package material
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // DefaultItem 은 부도발생 (dfOcr) 한 건.

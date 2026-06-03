@@ -3,7 +3,7 @@ package material
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // OverseasListingDecisionItem 은 해외 증권시장 주권등 상장 결정 (ovLstDecsn) 한 건.

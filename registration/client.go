@@ -1,6 +1,6 @@
 package registration
 
-import "github.com/kenshin579/opendart/internal/httpclient"
+import "github.com/kenshin579/opendart-go/internal/httpclient"
 
 // Client 는 DS006 증권신고서 주요정보 API 클라이언트.
 type Client struct{ http *httpclient.Client }

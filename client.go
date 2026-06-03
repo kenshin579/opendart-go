@@ -8,13 +8,13 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/kenshin579/opendart/disclosure"
-	"github.com/kenshin579/opendart/internal/corpcode"
-	"github.com/kenshin579/opendart/internal/httpclient"
-	"github.com/kenshin579/opendart/material"
-	"github.com/kenshin579/opendart/ownership"
-	"github.com/kenshin579/opendart/registration"
-	"github.com/kenshin579/opendart/report"
+	"github.com/kenshin579/opendart-go/disclosure"
+	"github.com/kenshin579/opendart-go/internal/corpcode"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
+	"github.com/kenshin579/opendart-go/material"
+	"github.com/kenshin579/opendart-go/ownership"
+	"github.com/kenshin579/opendart-go/registration"
+	"github.com/kenshin579/opendart-go/report"
 )
 
 const defaultCorpCacheTTL = 24 * time.Hour

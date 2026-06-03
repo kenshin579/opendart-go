@@ -3,7 +3,7 @@ package material
 import (
 	"context"
 
-	"github.com/kenshin579/opendart/internal/httpclient"
+	"github.com/kenshin579/opendart-go/internal/httpclient"
 )
 
 // TreasuryStockAcquisitionItem 은 자기주식 취득 결정 (tsstkAqDecsn) 한 건.

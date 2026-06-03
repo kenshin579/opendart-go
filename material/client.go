@@ -2,7 +2,7 @@
 // opendart.Client.Material 로 접근한다.
 package material
 
-import "github.com/kenshin579/opendart/internal/httpclient"
+import "github.com/kenshin579/opendart-go/internal/httpclient"
 
 // Client 는 주요사항보고서 주요정보 sub-client.
 type Client struct {

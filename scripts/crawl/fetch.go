@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	userAgent   = "opendart-doc-crawler (github.com/kenshin579/opendart)"
+	userAgent   = "opendart-doc-crawler (github.com/kenshin579/opendart-go)"
 	politeDelay = 300 * time.Millisecond
 )
 
